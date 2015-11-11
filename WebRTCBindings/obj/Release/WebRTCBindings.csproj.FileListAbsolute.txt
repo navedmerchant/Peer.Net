@@ -1,0 +1,4 @@
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\bin\Release\WebRTCBindings.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\bin\Release\WebRTCBindings.pdb
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Release\WebRTCBindings.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Release\WebRTCBindings.pdb

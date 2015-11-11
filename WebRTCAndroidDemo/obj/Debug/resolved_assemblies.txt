@@ -1,0 +1,12 @@
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\WebRTCAndroidDemo.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\Mono.Android.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\Newtonsoft.Json.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\PeerJS.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\System.Core.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\System.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\System.Xml.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\System.Xml.Linq.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\WebRTCBindings.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\websocket-sharp.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\assemblies\System.Runtime.Serialization.dll

@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="org.webrtc">
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.MediaSource" extends-generic-aware="org.webrtc.MediaSource" final="false" name="AudioSource" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="AudioSource" static="false" type="org.webrtc.AudioSource" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.MediaStreamTrack" extends-generic-aware="org.webrtc.MediaStreamTrack" final="false" name="AudioTrack" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="AudioTrack" static="false" type="org.webrtc.AudioTrack" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DataChannel" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="DataChannel" static="false" type="org.webrtc.DataChannel" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="bufferedAmount" native="true" return="long" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="true" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="true" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="label" native="true" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="registerObserver" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.DataChannel.Observer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="send" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.DataChannel.Buffer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="state" native="true" return="org.webrtc.DataChannel.State" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="unregisterObserver" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DataChannel.Buffer" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="DataChannel.Buffer" static="false" type="org.webrtc.DataChannel.Buffer" visibility="public">
+<parameter name="p0" type="java.nio.ByteBuffer">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="binary" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="data" static="false" transient="false" type="java.nio.ByteBuffer" type-generic-aware="java.nio.ByteBuffer" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DataChannel.Init" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="DataChannel.Init" static="false" type="org.webrtc.DataChannel.Init" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="false" name="id" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="maxRetransmitTimeMs" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="maxRetransmits" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="negotiated" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="ordered" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="protocol" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="DataChannel.Observer" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onBufferedAmountChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.DataChannel.Buffer">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onStateChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.DataChannel.State&gt;" final="true" name="DataChannel.State" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.DataChannel.State" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.DataChannel.State[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="CLOSED" static="true" transient="false" type="org.webrtc.DataChannel.State" type-generic-aware="org.webrtc.DataChannel.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CLOSING" static="true" transient="false" type="org.webrtc.DataChannel.State" type-generic-aware="org.webrtc.DataChannel.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONNECTING" static="true" transient="false" type="org.webrtc.DataChannel.State" type-generic-aware="org.webrtc.DataChannel.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="OPEN" static="true" transient="false" type="org.webrtc.DataChannel.State" type-generic-aware="org.webrtc.DataChannel.State" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="EglBase" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="EglBase" static="false" type="org.webrtc.EglBase" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="EglBase" static="false" type="org.webrtc.EglBase" visibility="public">
+<parameter name="p0" type="android.opengl.EGLContext">
+</parameter>
+<parameter name="p1" type="org.webrtc.EglBase.ConfigType">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createDummyPbufferSurface" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createPbufferSurface" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createSurface" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.Surface">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getContext" native="false" return="android.opengl.EGLContext" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasSurface" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isEGL14Supported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="makeCurrent" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="release" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="releaseSurface" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="swapBuffers" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EglBase.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.EglBase.ConfigType&gt;" final="true" name="EglBase.ConfigType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.EglBase.ConfigType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.EglBase.ConfigType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="PIXEL_BUFFER" static="true" transient="false" type="org.webrtc.EglBase.ConfigType" type-generic-aware="org.webrtc.EglBase.ConfigType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PLAIN" static="true" transient="false" type="org.webrtc.EglBase.ConfigType" type-generic-aware="org.webrtc.EglBase.ConfigType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RECORDABLE" static="true" transient="false" type="org.webrtc.EglBase.ConfigType" type-generic-aware="org.webrtc.EglBase.ConfigType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GlRectDrawer" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="GlRectDrawer" static="false" type="org.webrtc.GlRectDrawer" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="drawOes" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="float[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="drawYuv" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int[]">
+</parameter>
+<parameter name="p3" type="float[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="release" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GlShader" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="GlShader" static="false" type="org.webrtc.GlShader" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAttribLocation" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUniformLocation" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="release" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setVertexAttribArray" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.nio.FloatBuffer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="useProgram" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GlUtil" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="checkNoGLES2Error" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createFloatBuffer" native="false" return="java.nio.FloatBuffer" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="float[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IceCandidate" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="IceCandidate" static="false" type="org.webrtc.IceCandidate" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="sdp" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="sdpMLineIndex" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="sdpMid" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Logging" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Logging" static="false" type="org.webrtc.Logging" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="enableTracing" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.EnumSet&lt;org.webrtc.Logging.TraceLevel&gt;">
+</parameter>
+<parameter name="p2" type="org.webrtc.Logging.Severity">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.Logging.Severity&gt;" final="true" name="Logging.Severity" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.Logging.Severity" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.Logging.Severity[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="LS_ERROR" static="true" transient="false" type="org.webrtc.Logging.Severity" type-generic-aware="org.webrtc.Logging.Severity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LS_INFO" static="true" transient="false" type="org.webrtc.Logging.Severity" type-generic-aware="org.webrtc.Logging.Severity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LS_SENSITIVE" static="true" transient="false" type="org.webrtc.Logging.Severity" type-generic-aware="org.webrtc.Logging.Severity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LS_VERBOSE" static="true" transient="false" type="org.webrtc.Logging.Severity" type-generic-aware="org.webrtc.Logging.Severity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LS_WARNING" static="true" transient="false" type="org.webrtc.Logging.Severity" type-generic-aware="org.webrtc.Logging.Severity" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.Logging.TraceLevel&gt;" final="true" name="Logging.TraceLevel" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.Logging.TraceLevel" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.Logging.TraceLevel[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="TRACE_ALL" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_APICALL" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_CRITICAL" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_DEBUG" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_DEFAULT" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_ERROR" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_INFO" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_MEMORY" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_MODULECALL" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_NONE" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_STATEINFO" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_STREAM" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_TERSEINFO" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_TIMER" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACE_WARNING" static="true" transient="false" type="org.webrtc.Logging.TraceLevel" type-generic-aware="org.webrtc.Logging.TraceLevel" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="level" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoDecoder" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="isH264HwSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isVp8HwSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoDecoder.DecoderOutputBufferInfo" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MediaCodecVideoDecoder.DecoderOutputBufferInfo" static="false" type="org.webrtc.MediaCodecVideoDecoder.DecoderOutputBufferInfo" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="long">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoDecoder.DecoderProperties" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MediaCodecVideoDecoder.DecoderProperties" static="false" type="org.webrtc.MediaCodecVideoDecoder.DecoderProperties" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="codecName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="colorFormat" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.MediaCodecVideoDecoder.VideoCodecType&gt;" final="true" name="MediaCodecVideoDecoder.VideoCodecType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.MediaCodecVideoDecoder.VideoCodecType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_H264" static="true" transient="false" type="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_VP8" static="true" transient="false" type="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_VP9" static="true" transient="false" type="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoDecoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoEncoder" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="isH264HwSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isVp8HwSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoEncoder.EncoderProperties" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MediaCodecVideoEncoder.EncoderProperties" static="false" type="org.webrtc.MediaCodecVideoEncoder.EncoderProperties" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="codecName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="colorFormat" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaCodecVideoEncoder.OutputBufferInfo" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MediaCodecVideoEncoder.OutputBufferInfo" static="false" type="org.webrtc.MediaCodecVideoEncoder.OutputBufferInfo" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="java.nio.ByteBuffer">
+</parameter>
+<parameter name="p2" type="boolean">
+</parameter>
+<parameter name="p3" type="long">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.MediaCodecVideoEncoder.VideoCodecType&gt;" final="true" name="MediaCodecVideoEncoder.VideoCodecType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.MediaCodecVideoEncoder.VideoCodecType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_H264" static="true" transient="false" type="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_VP8" static="true" transient="false" type="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VIDEO_CODEC_VP9" static="true" transient="false" type="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" type-generic-aware="org.webrtc.MediaCodecVideoEncoder.VideoCodecType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaConstraints" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaConstraints" static="false" type="org.webrtc.MediaConstraints" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="mandatory" static="false" transient="false" type="java.util.List" type-generic-aware="java.util.List&lt;org.webrtc.MediaConstraints.KeyValuePair&gt;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="optional" static="false" transient="false" type="java.util.List" type-generic-aware="java.util.List&lt;org.webrtc.MediaConstraints.KeyValuePair&gt;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaConstraints.KeyValuePair" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaConstraints.KeyValuePair" static="false" type="org.webrtc.MediaConstraints.KeyValuePair" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaSource" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaSource" static="false" type="org.webrtc.MediaSource" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="state" native="false" return="org.webrtc.MediaSource.State" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.MediaSource.State&gt;" final="true" name="MediaSource.State" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.MediaSource.State" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.MediaSource.State[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="ENDED" static="true" transient="false" type="org.webrtc.MediaSource.State" type-generic-aware="org.webrtc.MediaSource.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INITIALIZING" static="true" transient="false" type="org.webrtc.MediaSource.State" type-generic-aware="org.webrtc.MediaSource.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LIVE" static="true" transient="false" type="org.webrtc.MediaSource.State" type-generic-aware="org.webrtc.MediaSource.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MUTED" static="true" transient="false" type="org.webrtc.MediaSource.State" type-generic-aware="org.webrtc.MediaSource.State" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaStream" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaStream" static="false" type="org.webrtc.MediaStream" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addTrack" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.AudioTrack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="addTrack" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoTrack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="label" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeTrack" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.AudioTrack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeTrack" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoTrack">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="audioTracks" static="false" transient="false" type="java.util.LinkedList" type-generic-aware="java.util.LinkedList&lt;org.webrtc.AudioTrack&gt;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="videoTracks" static="false" transient="false" type="java.util.LinkedList" type-generic-aware="java.util.LinkedList&lt;org.webrtc.VideoTrack&gt;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaStreamTrack" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaStreamTrack" static="false" type="org.webrtc.MediaStreamTrack" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="enabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="id" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="kind" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setState" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaStreamTrack.State">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="state" native="false" return="org.webrtc.MediaStreamTrack.State" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.MediaStreamTrack.State&gt;" final="true" name="MediaStreamTrack.State" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.MediaStreamTrack.State" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.MediaStreamTrack.State[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="ENDED" static="true" transient="false" type="org.webrtc.MediaStreamTrack.State" type-generic-aware="org.webrtc.MediaStreamTrack.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FAILED" static="true" transient="false" type="org.webrtc.MediaStreamTrack.State" type-generic-aware="org.webrtc.MediaStreamTrack.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INITIALIZING" static="true" transient="false" type="org.webrtc.MediaStreamTrack.State" type-generic-aware="org.webrtc.MediaStreamTrack.State" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LIVE" static="true" transient="false" type="org.webrtc.MediaStreamTrack.State" type-generic-aware="org.webrtc.MediaStreamTrack.State" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PeerConnection" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="addIceCandidate" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.IceCandidate">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="addStream" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaStream">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="true" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createAnswer" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.SdpObserver">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createDataChannel" native="true" return="org.webrtc.DataChannel" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.webrtc.DataChannel.Init">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createOffer" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.SdpObserver">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLocalDescription" native="true" return="org.webrtc.SessionDescription" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRemoteDescription" native="true" return="org.webrtc.SessionDescription" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStats" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.StatsObserver">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaStreamTrack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="iceConnectionState" native="true" return="org.webrtc.PeerConnection.IceConnectionState" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="iceGatheringState" native="true" return="org.webrtc.PeerConnection.IceGatheringState" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeStream" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaStream">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setIceConnectionReceivingTimeout" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLocalDescription" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.SdpObserver">
+</parameter>
+<parameter name="p1" type="org.webrtc.SessionDescription">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setRemoteDescription" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.SdpObserver">
+</parameter>
+<parameter name="p1" type="org.webrtc.SessionDescription">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="signalingState" native="true" return="org.webrtc.PeerConnection.SignalingState" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updateIce" native="true" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;org.webrtc.PeerConnection.IceServer&gt;">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.BundlePolicy&gt;" final="true" name="PeerConnection.BundlePolicy" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.BundlePolicy" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.BundlePolicy[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="BALANCED" static="true" transient="false" type="org.webrtc.PeerConnection.BundlePolicy" type-generic-aware="org.webrtc.PeerConnection.BundlePolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXBUNDLE" static="true" transient="false" type="org.webrtc.PeerConnection.BundlePolicy" type-generic-aware="org.webrtc.PeerConnection.BundlePolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXCOMPAT" static="true" transient="false" type="org.webrtc.PeerConnection.BundlePolicy" type-generic-aware="org.webrtc.PeerConnection.BundlePolicy" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.IceConnectionState&gt;" final="true" name="PeerConnection.IceConnectionState" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.IceConnectionState" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.IceConnectionState[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="CHECKING" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CLOSED" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COMPLETED" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONNECTED" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DISCONNECTED" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FAILED" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NEW" static="true" transient="false" type="org.webrtc.PeerConnection.IceConnectionState" type-generic-aware="org.webrtc.PeerConnection.IceConnectionState" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.IceGatheringState&gt;" final="true" name="PeerConnection.IceGatheringState" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.IceGatheringState" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.IceGatheringState[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="COMPLETE" static="true" transient="false" type="org.webrtc.PeerConnection.IceGatheringState" type-generic-aware="org.webrtc.PeerConnection.IceGatheringState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="GATHERING" static="true" transient="false" type="org.webrtc.PeerConnection.IceGatheringState" type-generic-aware="org.webrtc.PeerConnection.IceGatheringState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NEW" static="true" transient="false" type="org.webrtc.PeerConnection.IceGatheringState" type-generic-aware="org.webrtc.PeerConnection.IceGatheringState" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PeerConnection.IceServer" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PeerConnection.IceServer" static="false" type="org.webrtc.PeerConnection.IceServer" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="PeerConnection.IceServer" static="false" type="org.webrtc.PeerConnection.IceServer" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="password" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="uri" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="username" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.IceTransportsType&gt;" final="true" name="PeerConnection.IceTransportsType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.IceTransportsType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.IceTransportsType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="ALL" static="true" transient="false" type="org.webrtc.PeerConnection.IceTransportsType" type-generic-aware="org.webrtc.PeerConnection.IceTransportsType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NOHOST" static="true" transient="false" type="org.webrtc.PeerConnection.IceTransportsType" type-generic-aware="org.webrtc.PeerConnection.IceTransportsType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NONE" static="true" transient="false" type="org.webrtc.PeerConnection.IceTransportsType" type-generic-aware="org.webrtc.PeerConnection.IceTransportsType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RELAY" static="true" transient="false" type="org.webrtc.PeerConnection.IceTransportsType" type-generic-aware="org.webrtc.PeerConnection.IceTransportsType" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="PeerConnection.Observer" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onAddStream" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaStream">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onDataChannel" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.DataChannel">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onIceCandidate" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.IceCandidate">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onIceConnectionChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.PeerConnection.IceConnectionState">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onIceConnectionReceivingChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onIceGatheringChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.PeerConnection.IceGatheringState">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRemoveStream" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaStream">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onRenegotiationNeeded" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSignalingChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.PeerConnection.SignalingState">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PeerConnection.RTCConfiguration" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PeerConnection.RTCConfiguration" static="false" type="org.webrtc.PeerConnection.RTCConfiguration" visibility="public">
+<parameter name="p0" type="java.util.List&lt;org.webrtc.PeerConnection.IceServer&gt;">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="false" name="audioJitterBufferFastAccelerate" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="audioJitterBufferMaxPackets" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="bundlePolicy" static="false" transient="false" type="org.webrtc.PeerConnection.BundlePolicy" type-generic-aware="org.webrtc.PeerConnection.BundlePolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="iceServers" static="false" transient="false" type="java.util.List" type-generic-aware="java.util.List&lt;org.webrtc.PeerConnection.IceServer&gt;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="iceTransportsType" static="false" transient="false" type="org.webrtc.PeerConnection.IceTransportsType" type-generic-aware="org.webrtc.PeerConnection.IceTransportsType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="rtcpMuxPolicy" static="false" transient="false" type="org.webrtc.PeerConnection.RtcpMuxPolicy" type-generic-aware="org.webrtc.PeerConnection.RtcpMuxPolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="tcpCandidatePolicy" static="false" transient="false" type="org.webrtc.PeerConnection.TcpCandidatePolicy" type-generic-aware="org.webrtc.PeerConnection.TcpCandidatePolicy" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.RtcpMuxPolicy&gt;" final="true" name="PeerConnection.RtcpMuxPolicy" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.RtcpMuxPolicy" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.RtcpMuxPolicy[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="NEGOTIATE" static="true" transient="false" type="org.webrtc.PeerConnection.RtcpMuxPolicy" type-generic-aware="org.webrtc.PeerConnection.RtcpMuxPolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REQUIRE" static="true" transient="false" type="org.webrtc.PeerConnection.RtcpMuxPolicy" type-generic-aware="org.webrtc.PeerConnection.RtcpMuxPolicy" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.SignalingState&gt;" final="true" name="PeerConnection.SignalingState" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.SignalingState" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.SignalingState[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="CLOSED" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HAVE_LOCAL_OFFER" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HAVE_LOCAL_PRANSWER" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HAVE_REMOTE_OFFER" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HAVE_REMOTE_PRANSWER" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STABLE" static="true" transient="false" type="org.webrtc.PeerConnection.SignalingState" type-generic-aware="org.webrtc.PeerConnection.SignalingState" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.PeerConnection.TcpCandidatePolicy&gt;" final="true" name="PeerConnection.TcpCandidatePolicy" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.PeerConnection.TcpCandidatePolicy" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.PeerConnection.TcpCandidatePolicy[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="DISABLED" static="true" transient="false" type="org.webrtc.PeerConnection.TcpCandidatePolicy" type-generic-aware="org.webrtc.PeerConnection.TcpCandidatePolicy" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENABLED" static="true" transient="false" type="org.webrtc.PeerConnection.TcpCandidatePolicy" type-generic-aware="org.webrtc.PeerConnection.TcpCandidatePolicy" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PeerConnectionFactory" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PeerConnectionFactory" static="false" type="org.webrtc.PeerConnectionFactory" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createAudioSource" native="false" return="org.webrtc.AudioSource" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.MediaConstraints">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createAudioTrack" native="false" return="org.webrtc.AudioTrack" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.webrtc.AudioSource">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createLocalMediaStream" native="false" return="org.webrtc.MediaStream" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createPeerConnection" native="false" return="org.webrtc.PeerConnection" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.List&lt;org.webrtc.PeerConnection.IceServer&gt;">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+<parameter name="p2" type="org.webrtc.PeerConnection.Observer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createPeerConnection" native="false" return="org.webrtc.PeerConnection" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.PeerConnection.RTCConfiguration">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+<parameter name="p2" type="org.webrtc.PeerConnection.Observer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createVideoSource" native="false" return="org.webrtc.VideoSource" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoCapturer">
+</parameter>
+<parameter name="p1" type="org.webrtc.MediaConstraints">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createVideoTrack" native="false" return="org.webrtc.VideoTrack" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.webrtc.VideoSource">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initializeAndroidGlobals" native="true" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="boolean">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+<parameter name="p4" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initializeFieldTrials" native="true" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="nativeSetOptions" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="org.webrtc.PeerConnectionFactory.Options">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOptions" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.PeerConnectionFactory.Options">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PeerConnectionFactory.Options" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PeerConnectionFactory.Options" static="false" type="org.webrtc.PeerConnectionFactory.Options" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="false" name="disableEncryption" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="networkIgnoreMask" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="SdpObserver" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onCreateFailure" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onCreateSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.SessionDescription">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSetFailure" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSetSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SessionDescription" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="SessionDescription" static="false" type="org.webrtc.SessionDescription" visibility="public">
+<parameter name="p0" type="org.webrtc.SessionDescription.Type">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="description" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="type" static="false" transient="false" type="org.webrtc.SessionDescription.Type" type-generic-aware="org.webrtc.SessionDescription.Type" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.SessionDescription.Type&gt;" final="true" name="SessionDescription.Type" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="canonicalForm" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="fromCanonicalForm" native="false" return="org.webrtc.SessionDescription.Type" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.SessionDescription.Type" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.SessionDescription.Type[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="ANSWER" static="true" transient="false" type="org.webrtc.SessionDescription.Type" type-generic-aware="org.webrtc.SessionDescription.Type" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="OFFER" static="true" transient="false" type="org.webrtc.SessionDescription.Type" type-generic-aware="org.webrtc.SessionDescription.Type" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRANSWER" static="true" transient="false" type="org.webrtc.SessionDescription.Type" type-generic-aware="org.webrtc.SessionDescription.Type" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="StatsObserver" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onComplete" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.StatsReport[]">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="StatsReport" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="StatsReport" static="false" type="org.webrtc.StatsReport" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="double">
+</parameter>
+<parameter name="p3" type="org.webrtc.StatsReport.Value[]">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="id" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="timestamp" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="type" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="values" static="false" transient="false" type="org.webrtc.StatsReport.Value[]" type-generic-aware="org.webrtc.StatsReport.Value[]" value="null" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="StatsReport.Value" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="StatsReport.Value" static="false" type="org.webrtc.StatsReport.Value" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="true" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="value" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturer" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoCapturer" static="false" type="org.webrtc.VideoCapturer" visibility="protected">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="org.webrtc.VideoCapturer" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setNativeCapturer" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="long">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.VideoCapturer" extends-generic-aware="org.webrtc.VideoCapturer" final="false" name="VideoCapturerAndroid" static="false" visibility="public">
+<implements name="android.hardware.Camera.PreviewCallback" name-generic-aware="android.hardware.Camera.PreviewCallback">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="changeCaptureFormat" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="org.webrtc.VideoCapturerAndroid" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="org.webrtc.VideoCapturerAndroid.CameraErrorHandler">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeviceCount" native="false" return="int" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeviceNames" native="false" return="java.lang.String[]" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNameOfBackFacingDevice" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNameOfFrontFacingDevice" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSupportedFormats" native="false" return="java.util.List&lt;org.webrtc.VideoCapturerAndroid.CaptureFormat&gt;" static="false" synchronized="true" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onOutputFormatRequest" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPreviewFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="android.hardware.Camera">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="switchCamera" native="false" return="boolean" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="java.lang.Runnable">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.1" static="false" visibility="">
+<implements name="android.hardware.Camera.ErrorCallback" name-generic-aware="android.hardware.Camera.ErrorCallback">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onError" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.hardware.Camera">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.VideoCapturerAndroid.ClosestComparator" extends-generic-aware="org.webrtc.VideoCapturerAndroid.ClosestComparator&lt;android.hardware.Camera.Size&gt;" final="false" name="VideoCapturerAndroid.10" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.11" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.2" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.3" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.4" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.5" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.6" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.7" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.8" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.VideoCapturerAndroid.ClosestComparator" extends-generic-aware="org.webrtc.VideoCapturerAndroid.ClosestComparator&lt;int[]&gt;" final="false" name="VideoCapturerAndroid.9" static="true" visibility=""/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="VideoCapturerAndroid.CameraErrorHandler" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraError" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="VideoCapturerAndroid.CameraThread" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="VideoCapturerAndroid.CameraThread" static="false" type="org.webrtc.VideoCapturerAndroid.CameraThread" visibility="public">
+<parameter name="p0" type="java.util.concurrent.Exchanger&lt;android.os.Handler&gt;">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.CaptureFormat" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoCapturerAndroid.CaptureFormat" static="false" type="org.webrtc.VideoCapturerAndroid.CaptureFormat" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="frameSize" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="frameSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="height" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="imageFormat" static="false" transient="false" type="int" type-generic-aware="int" value="842094169" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="maxFramerate" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="minFramerate" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="width" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="VideoCapturerAndroid.CapturerObserver" static="true" visibility="">
+<method abstract="true" deprecated="not deprecated" final="false" name="OnCapturerStarted" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="OnFrameCaptured" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="long">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="OnOutputFormatRequest" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</interface>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.ClosestComparator" static="true" visibility="">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="java.util.Comparator" name-generic-aware="java.util.Comparator&lt;T&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+<parameter name="p1" type="T">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.FramePool" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCapturerAndroid.NativeObserver" static="true" visibility="">
+<implements name="org.webrtc.VideoCapturerAndroid.CapturerObserver" name-generic-aware="org.webrtc.VideoCapturerAndroid.CapturerObserver">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="VideoCapturerAndroid.NativeObserver" static="false" type="org.webrtc.VideoCapturerAndroid.NativeObserver" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="OnCapturerStarted" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="OnFrameCaptured" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="long">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="OnOutputFormatRequest" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRenderer" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoRenderer" static="false" type="org.webrtc.VideoRenderer" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.Callbacks">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createGui" native="false" return="org.webrtc.VideoRenderer" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispose" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="VideoRenderer.Callbacks" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="canApplyRotation" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="renderFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.I420Frame">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRenderer.I420Frame" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoRenderer.I420Frame" static="false" type="org.webrtc.VideoRenderer.I420Frame" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int[]">
+</parameter>
+<parameter name="p4" type="java.nio.ByteBuffer[]">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="VideoRenderer.I420Frame" static="false" type="org.webrtc.VideoRenderer.I420Frame" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="java.lang.Object">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="copyFrom" native="false" return="org.webrtc.VideoRenderer.I420Frame" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="copyFrom" native="false" return="org.webrtc.VideoRenderer.I420Frame" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.I420Frame">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="rotatedHeight" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="rotatedWidth" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="height" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="rotationDegree" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="textureId" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="textureObject" static="false" transient="false" type="java.lang.Object" type-generic-aware="java.lang.Object" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="width" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="yuvFrame" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="yuvPlanes" static="false" transient="false" type="java.nio.ByteBuffer[]" type-generic-aware="java.nio.ByteBuffer[]" value="null" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="yuvStrides" static="false" transient="false" type="int[]" type-generic-aware="int[]" value="null" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRendererGui" static="false" visibility="public">
+<implements name="android.opengl.GLSurfaceView.Renderer" name-generic-aware="android.opengl.GLSurfaceView.Renderer">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="createGui" native="false" return="org.webrtc.VideoRenderer" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="org.webrtc.VideoRendererGui.ScalingType">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createGuiRenderer" native="false" return="org.webrtc.VideoRenderer.Callbacks" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="org.webrtc.VideoRendererGui.ScalingType">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getEGLContext" native="false" return="android.opengl.EGLContext" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onDrawFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLConfig">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.Callbacks">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setView" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.opengl.GLSurfaceView">
+</parameter>
+<parameter name="p1" type="java.lang.Runnable">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="update" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.Callbacks">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="org.webrtc.VideoRendererGui.ScalingType">
+</parameter>
+<parameter name="p6" type="boolean">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRendererGui.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRendererGui.2" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.VideoRendererGui.ScalingType&gt;" final="true" name="VideoRendererGui.ScalingType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="org.webrtc.VideoRendererGui.ScalingType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="org.webrtc.VideoRendererGui.ScalingType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="SCALE_ASPECT_BALANCED" static="true" transient="false" type="org.webrtc.VideoRendererGui.ScalingType" type-generic-aware="org.webrtc.VideoRendererGui.ScalingType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SCALE_ASPECT_FILL" static="true" transient="false" type="org.webrtc.VideoRendererGui.ScalingType" type-generic-aware="org.webrtc.VideoRendererGui.ScalingType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SCALE_ASPECT_FIT" static="true" transient="false" type="org.webrtc.VideoRendererGui.ScalingType" type-generic-aware="org.webrtc.VideoRendererGui.ScalingType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoRendererGui.YuvImageRenderer" static="true" visibility="">
+<implements name="org.webrtc.VideoRenderer.Callbacks" name-generic-aware="org.webrtc.VideoRenderer.Callbacks">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="canApplyRotation" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="renderFrame" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer.I420Frame">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="org.webrtc.VideoRendererGui.ScalingType">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setScreenSize" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;org.webrtc.VideoRendererGui.YuvImageRenderer.RendererType&gt;" final="true" name="VideoRendererGui.YuvImageRenderer.RendererType" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="RENDERER_TEXTURE" static="true" transient="false" type="org.webrtc.VideoRendererGui.YuvImageRenderer.RendererType" type-generic-aware="org.webrtc.VideoRendererGui.YuvImageRenderer.RendererType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RENDERER_YUV" static="true" transient="false" type="org.webrtc.VideoRendererGui.YuvImageRenderer.RendererType" type-generic-aware="org.webrtc.VideoRendererGui.YuvImageRenderer.RendererType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.MediaSource" extends-generic-aware="org.webrtc.MediaSource" final="false" name="VideoSource" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoSource" static="false" type="org.webrtc.VideoSource" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="restart" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="org.webrtc.MediaStreamTrack" extends-generic-aware="org.webrtc.MediaStreamTrack" final="false" name="VideoTrack" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoTrack" static="false" type="org.webrtc.VideoTrack" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addRenderer" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeRenderer" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="org.webrtc.VideoRenderer">
+</parameter>
+</method>
+</class>
+</package>
+<package name="org.webrtc.videoengine">
+<class abstract="false" deprecated="not deprecated" extends="android.opengl.GLSurfaceView" extends-generic-aware="android.opengl.GLSurfaceView" final="false" name="ViEAndroidGLES20" static="false" visibility="public">
+<implements name="android.opengl.GLSurfaceView.Renderer" name-generic-aware="android.opengl.GLSurfaceView.Renderer">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ViEAndroidGLES20" static="false" type="org.webrtc.videoengine.ViEAndroidGLES20" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ViEAndroidGLES20" static="false" type="org.webrtc.videoengine.ViEAndroidGLES20" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="DeRegisterNativeObject" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="IsSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="ReDraw" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="RegisterNativeObject" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="UseOpenGL2" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onDrawFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.opengles.GL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLConfig">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViEAndroidGLES20.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViEAndroidGLES20.ConfigChooser" static="true" visibility="">
+<implements name="android.opengl.GLSurfaceView.EGLConfigChooser" name-generic-aware="android.opengl.GLSurfaceView.EGLConfigChooser">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ViEAndroidGLES20.ConfigChooser" static="false" type="org.webrtc.videoengine.ViEAndroidGLES20.ConfigChooser" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="chooseConfig" native="false" return="javax.microedition.khronos.egl.EGLConfig" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.egl.EGL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLDisplay">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="chooseConfig" native="false" return="javax.microedition.khronos.egl.EGLConfig" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.egl.EGL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLDisplay">
+</parameter>
+<parameter name="p2" type="javax.microedition.khronos.egl.EGLConfig[]">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="mAlphaSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mBlueSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mDepthSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mGreenSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mRedSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mStencilSize" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViEAndroidGLES20.ContextFactory" static="true" visibility="">
+<implements name="android.opengl.GLSurfaceView.EGLContextFactory" name-generic-aware="android.opengl.GLSurfaceView.EGLContextFactory">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="createContext" native="false" return="javax.microedition.khronos.egl.EGLContext" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.egl.EGL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLDisplay">
+</parameter>
+<parameter name="p2" type="javax.microedition.khronos.egl.EGLConfig">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="destroyContext" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="javax.microedition.khronos.egl.EGL10">
+</parameter>
+<parameter name="p1" type="javax.microedition.khronos.egl.EGLDisplay">
+</parameter>
+<parameter name="p2" type="javax.microedition.khronos.egl.EGLContext">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViERenderer" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ViERenderer" static="false" type="org.webrtc.videoengine.ViERenderer" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="CreateRenderer" native="false" return="android.view.SurfaceView" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="CreateRenderer" native="false" return="android.view.SurfaceView" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViESurfaceRenderer" static="false" visibility="public">
+<implements name="android.view.SurfaceHolder.Callback" name-generic-aware="android.view.SurfaceHolder.Callback">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ViESurfaceRenderer" static="false" type="org.webrtc.videoengine.ViESurfaceRenderer" visibility="public">
+<parameter name="p0" type="android.view.SurfaceView">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="CreateBitmap" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="CreateByteBuffer" native="false" return="java.nio.ByteBuffer" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="DrawBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="DrawByteBuffer" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="SetCoordinates" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="float">
+</parameter>
+<parameter name="p1" type="float">
+</parameter>
+<parameter name="p2" type="float">
+</parameter>
+<parameter name="p3" type="float">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceDestroyed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid" static="false" visibility="public">
+<implements name="android.hardware.Camera.PreviewCallback" name-generic-aware="android.hardware.Camera.PreviewCallback">
+</implements>
+<implements name="android.view.SurfaceHolder.Callback" name-generic-aware="android.view.SurfaceHolder.Callback">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="VideoCaptureAndroid" static="false" type="org.webrtc.videoengine.VideoCaptureAndroid" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPreviewFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="android.hardware.Camera">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLocalPreview" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceChanged" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceCreated" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceDestroyed" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid.2" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid.3" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid.4" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureAndroid.5" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="VideoCaptureAndroid.CameraThread" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="VideoCaptureAndroid.CameraThread" static="false" type="org.webrtc.videoengine.VideoCaptureAndroid.CameraThread" visibility="public">
+<parameter name="p0" type="java.util.concurrent.Exchanger&lt;android.os.Handler&gt;">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="VideoCaptureDeviceInfoAndroid" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="VideoCaptureDeviceInfoAndroid" static="false" type="org.webrtc.videoengine.VideoCaptureDeviceInfoAndroid" visibility="public">
+</constructor>
+</class>
+</package>
+<package name="org.webrtc.voiceengine">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildInfo" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BuildInfo" static="false" type="org.webrtc.voiceengine.BuildInfo" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAndroidBuildId" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBrand" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBuildRelease" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBuildType" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDevice" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeviceManufacturer" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeviceModel" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getProduct" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSdkVersion" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="WebRtcAudioManager" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="isLowLatencyInputSupported" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="WebRtcAudioRecord" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="WebRtcAudioRecord.AudioRecordThread" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="WebRtcAudioRecord.AudioRecordThread" static="false" type="org.webrtc.voiceengine.WebRtcAudioRecord.AudioRecordThread" visibility="public">
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="joinThread" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="WebRtcAudioTrack" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="WebRtcAudioTrack.AudioTrackThread" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="WebRtcAudioTrack.AudioTrackThread" static="false" type="org.webrtc.voiceengine.WebRtcAudioTrack.AudioTrackThread" visibility="public">
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="joinThread" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="WebRtcAudioUtils" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="WebRtcAudioUtils" static="false" type="org.webrtc.voiceengine.WebRtcAudioUtils" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="deviceIsBlacklistedForHwAecUsage" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="deviceIsBlacklistedForOpenSLESUsage" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getThreadInfo" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isAcousticEchoCancelerApproved" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isAcousticEchoCancelerSupported" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="logDeviceInfo" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="runningOnEmulator" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="runningOnGingerBreadOrHigher" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="runningOnJellyBeanMR1OrHigher" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="runningOnJellyBeanOrHigher" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="runningOnLollipopOrHigher" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+</api>

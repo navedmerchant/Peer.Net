@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="WebRTCAndroidDemo\WebRTCAndroidDemo.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.ZY22237RLB" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PeerJS\Peer.cs">
+    <Files>
+      <File FileName="PeerJS\Peer.cs" Line="48" Column="41" />
+      <File FileName="PeerJS\DataConnection.cs" Line="57" Column="1" />
+      <File FileName="PeerJS\Util.cs" Line="80" Column="1" />
+      <File FileName="PeerJS\Negotiator.cs" Line="40" Column="1" />
+      <File FileName="PeerJS\Resources\Values\Strings.xml" Line="1" Column="1" />
+      <File FileName="PeerJS\Resources\AboutResources.txt" Line="1" Column="1" />
+      <File FileName="PeerJS\Resources\Resource.Designer.cs" Line="1" Column="1" />
+      <File FileName="WebRTCBindings\obj\Release\generated\src\Org.Webrtc.StatsReport.cs" Line="131" Column="19" />
+      <File FileName="WebRTCAndroidDemo\Resources\values\Strings.xml" Line="1" Column="1" />
+      <File FileName="WebRTCAndroidDemo\Resources\Resource.Designer.cs" Line="32" Column="104" />
+      <File FileName="PeerJS\Socket.cs" Line="75" Column="46" />
+      <File FileName="WebRTCAndroidDemo\MainActivity.cs" Line="51" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\PeerJS\Negotiator.cs" line="172" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WebRTCAndroidDemo AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>

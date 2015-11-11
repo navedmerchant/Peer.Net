@@ -1,0 +1,16 @@
+WebRTCAndroidDemo.MainActivity, WebRTCAndroidDemo;md592ed5b8a3c153e66cb3a01249d8f5140.MainActivity
+WebRTCAndroidDemo.MainActivity, WebRTCAndroidDemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592ed5b8a3c153e66cb3a01249d8f5140.MainActivity
+WebRTCAndroidDemo.MainActivity;md592ed5b8a3c153e66cb3a01249d8f5140.MainActivity
+webrtcandroiddemo.MainActivity;md592ed5b8a3c153e66cb3a01249d8f5140.MainActivity
+PeerNet.DataConnectionObserver, PeerJS;md5714ba09e814ea729a316d7ad1490ad13.DataConnectionObserver
+PeerNet.DataConnectionObserver, PeerJS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5714ba09e814ea729a316d7ad1490ad13.DataConnectionObserver
+PeerNet.DataConnectionObserver;md5714ba09e814ea729a316d7ad1490ad13.DataConnectionObserver
+peernet.DataConnectionObserver;md5714ba09e814ea729a316d7ad1490ad13.DataConnectionObserver
+PeerNet.SDPObserver, PeerJS;md5714ba09e814ea729a316d7ad1490ad13.SDPObserver
+PeerNet.SDPObserver, PeerJS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5714ba09e814ea729a316d7ad1490ad13.SDPObserver
+PeerNet.SDPObserver;md5714ba09e814ea729a316d7ad1490ad13.SDPObserver
+peernet.SDPObserver;md5714ba09e814ea729a316d7ad1490ad13.SDPObserver
+PeerNet.Observer, PeerJS;md5714ba09e814ea729a316d7ad1490ad13.Observer
+PeerNet.Observer, PeerJS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5714ba09e814ea729a316d7ad1490ad13.Observer
+PeerNet.Observer;md5714ba09e814ea729a316d7ad1490ad13.Observer
+peernet.Observer;md5714ba09e814ea729a316d7ad1490ad13.Observer

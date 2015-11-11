@@ -1,0 +1,5 @@
+c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Debug\WebRTCBindings.csprojResolveAssemblyReference.cache
+c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\bin\Debug\WebRTCBindings.dll
+c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\bin\Debug\WebRTCBindings.pdb
+c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Debug\WebRTCBindings.dll
+c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Debug\WebRTCBindings.pdb

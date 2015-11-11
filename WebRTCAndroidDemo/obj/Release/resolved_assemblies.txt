@@ -1,0 +1,10 @@
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\WebRTCAndroidDemo.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\mscorlib.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\PeerJS.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\System.Core.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\System.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\WebRTCBindings.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\websocket-sharp.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\Newtonsoft.Json.dll
+C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Release\android\assets\System.Runtime.Serialization.dll
