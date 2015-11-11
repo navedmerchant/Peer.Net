@@ -3,6 +3,7 @@ using Org.Webrtc;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Android.Content;
 
 
 namespace PeerNet
@@ -13,7 +14,7 @@ namespace PeerNet
 		public PeerConnection peerConnection;
 		public Dictionary<string,PeerConnection> connections;
 		private static Negotiator negotiator =  new Negotiator();
-
+		private Context context;
 		private Negotiator (){
 		
 		}
@@ -22,8 +23,9 @@ namespace PeerNet
 			return negotiator;
 		}
 
-		public void StartConnection (DataConnection dataConnection, NegotiatorOptions negotiatorOptions)
+		public void StartConnection (DataConnection dataConnection, NegotiatorOptions negotiatorOptions, Context context)
 		{
+			this.context = context;
 			this.dataConnection = dataConnection;
 			PeerConnection peerConnection = GetPeerConnection(dataConnection,negotiatorOptions); 
 			dataConnection.Connection = peerConnection;
@@ -67,6 +69,7 @@ namespace PeerNet
 		PeerConnection StartPeerConnection (DataConnection dataConnection)
 		{
 			MediaConstraints mediaConstraints = new MediaConstraints ();
+			PeerConnectionFactory.InitializeAndroidGlobals (context, true, true,true,VideoRendererGui.EGLContext);
 			PeerConnectionFactory peerConnectionFactory = new PeerConnectionFactory ();
 			//mediaConstraints.Optional.Add(new MediaConstraints.KeyValuePair("RtpDataChannels","true"));
 			Observer observer = new Observer (this);

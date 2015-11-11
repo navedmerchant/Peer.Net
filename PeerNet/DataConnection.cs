@@ -33,7 +33,7 @@ namespace PeerNet
 			negotiator = Negotiator.GetNegotiator ();
 			NegotiatorOptions negotiatorOptions = new NegotiatorOptions ();
 			negotiatorOptions.Originator = true;
-			negotiator.StartConnection (this, negotiatorOptions);
+			negotiator.StartConnection (this, negotiatorOptions,provider.context);
 		}
 
 		public void Initialize(DataChannel dataChannel){

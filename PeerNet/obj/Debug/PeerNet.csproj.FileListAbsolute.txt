@@ -32,3 +32,20 @@ C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\PeerNet\o
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\PeerNet\obj\Debug\res\values\strings.xml
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\PeerNet\obj\Debug\R.cs.flag
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\PeerNet\obj\Debug\uploadflags.txt
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\PeerJS.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\PeerJS.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\PeerJS.PeerJS.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\PeerJS.PeerJS-Signed.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\WebRTCBindings.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\websocket-sharp.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\WebRTCBindings.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\bin\Debug\websocket-sharp.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\PeerNet.csprojResolveAssemblyReference.cache
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\PeerJS.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\PeerJS.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\android\bin\PeerJS.PeerJS.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\res\values\strings.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\R.cs.flag
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\PeerNet\obj\Debug\uploadflags.txt

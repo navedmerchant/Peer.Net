@@ -39,8 +39,8 @@ namespace WebRTCAndroidDemo
 			Button sendButton = FindViewById<Button> (Resource.Id.button1);
 			sendButton.Click += SendButton_Click;
 
-			PeerConnectionFactory.InitializeAndroidGlobals (this, true, true,true,VideoRendererGui.EGLContext);
-			peer = new Peer(null, new PeerOptions(null, null, "ytgklpf684u0udi", null, null));
+
+			peer = new Peer(null, new PeerOptions(null, null, "ytgklpf684u0udi", null, null),this);
             peer.PeerConnected += Peer_PeerConnected;
         }
 

@@ -3,3 +3,8 @@ c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBin
 c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\bin\Debug\WebRTCBindings.pdb
 c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Debug\WebRTCBindings.dll
 c:\users\naved\documents\visual studio 2015\Projects\WebRTCAndroidDemo\WebRTCBindings\obj\Debug\WebRTCBindings.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCBindings\bin\Debug\WebRTCBindings.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCBindings\bin\Debug\WebRTCBindings.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCBindings\obj\Debug\WebRTCBindings.csprojResolveAssemblyReference.cache
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCBindings\obj\Debug\WebRTCBindings.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCBindings\obj\Debug\WebRTCBindings.pdb

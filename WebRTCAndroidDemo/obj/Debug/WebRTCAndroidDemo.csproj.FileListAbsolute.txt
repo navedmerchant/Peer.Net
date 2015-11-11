@@ -19,3 +19,24 @@ C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAnd
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\obj\Debug\uploadflags.txt
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\bin\Debug\PeerJS.dll
 C:\Users\Naved\Documents\Visual Studio 2015\Projects\WebRTCAndroidDemo\WebRTCAndroidDemo\bin\Debug\PeerJS.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCAndroidDemo.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCAndroidDemo.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCAndroidDemo.WebRTCAndroidDemo.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCAndroidDemo.WebRTCAndroidDemo-Signed.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\PeerJS.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCBindings.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\websocket-sharp.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\WebRTCBindings.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\PeerJS.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\websocket-sharp.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\WebRTCAndroidDemo.csprojResolveAssemblyReference.cache
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\WebRTCAndroidDemo.dll
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\WebRTCAndroidDemo.pdb
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\android\bin\WebRTCAndroidDemo.WebRTCAndroidDemo.apk
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\res\layout\main.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\res\values\strings.xml
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\res\drawable\icon.png
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\R.cs.flag
+C:\Users\Naved\Documents\GitHub\Peer.Net\Peer.Net\WebRTCAndroidDemo\obj\Debug\uploadflags.txt
