@@ -8,6 +8,9 @@ using Android.Content;
 
 namespace PeerNet
 {
+	/// <summary>
+	/// A singleton class that handles the negotiaition of the connection with the other peer.
+	/// </summary>
 	public class Negotiator
 	{
 		public DataConnection dataConnection;
@@ -23,6 +26,12 @@ namespace PeerNet
 			return negotiator;
 		}
 
+		/// <summary>
+		/// Starts the connection.
+		/// </summary>
+		/// <param name="dataConnection">Data connection.</param>
+		/// <param name="negotiatorOptions">Negotiator options.</param>
+		/// <param name="context">Context, passed therough from the activity.</param>
 		public void StartConnection (DataConnection dataConnection, NegotiatorOptions negotiatorOptions, Context context)
 		{
 			this.context = context;
@@ -73,7 +82,7 @@ namespace PeerNet
 			PeerConnectionFactory peerConnectionFactory = new PeerConnectionFactory ();
 			//mediaConstraints.Optional.Add(new MediaConstraints.KeyValuePair("RtpDataChannels","true"));
 			Observer observer = new Observer (this);
-			peerConnection = peerConnectionFactory.CreatePeerConnection (dataConnection.Provider.options.Config, mediaConstraints, observer);
+			peerConnection = peerConnectionFactory.CreatePeerConnection (dataConnection.Provider.Options.Config, mediaConstraints, observer);
 			return peerConnection;
 		}
 	}
@@ -148,7 +157,7 @@ namespace PeerNet
 			JObject message = new JObject ();
 			message ["type"] = "OFFER";
 			message ["payload"] = payload;
-			message ["dst"] = negotiator.dataConnection.Peer.id;
+			message ["dst"] = negotiator.dataConnection.Peer.Id;
 			Console.WriteLine ("Offer JSON " + message.ToString()); 
 			negotiator.dataConnection.Provider.socket.Send (message.ToString());
 		}
@@ -188,7 +197,7 @@ namespace PeerNet
 			JObject message = new JObject ();
 			message ["type"] = "CANDIDATE";
 			message ["payload"] = payload;
-			message ["dst"] = negotiator.dataConnection.Peer.id;
+			message ["dst"] = negotiator.dataConnection.Peer.Id;
 			negotiator.dataConnection.Provider.socket.Send (message.ToString ());
 
 		}

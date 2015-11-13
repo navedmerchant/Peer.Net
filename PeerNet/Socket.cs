@@ -13,6 +13,9 @@ using WebSocketSharp;
 
 namespace PeerNet
 {
+	/// <summary>
+	/// Encapsulates the connection to the peer server, using websockets.
+	/// </summary>
     public class Socket
     {
         private Uri wsUri;

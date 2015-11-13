@@ -13,30 +13,30 @@ using Android.Content;
 namespace PeerNet
 {
     /// <summary>
-    /// Class Representation of a Peer.
+    /// Class Representation of a Peer, for both this peer and the remote peer
     /// </summary>
     public class Peer
     {
         /// <summary>
         /// Options for this Peer.
         /// </summary>
-        public PeerOptions options;
+		public PeerOptions Options{get;set;}
         /// <summary>
         /// Id of this peer.
         /// </summary>
-		public string id;
+		public string Id{get;set;}
         /// <summary>
         /// Connection has been killed.
         /// </summary>
-		public bool destroyed;
+		public bool Destroyed{get;set;}
         /// <summary>
         /// connection to the peer server has been killed.
         /// </summary>
-		public bool disconnected;
+		public bool Disconnected{get;set;}
         /// <summary>
         /// Connections have not been opened.
         /// </summary>
-		public bool open;
+		public bool Open{get;set;}
         /// <summary>
         /// List of data connections for this server;
         /// </summary>
@@ -60,27 +60,27 @@ namespace PeerNet
         /// <param name="peerOptions">Peer options, An instance of Peer.PeerOptions class</param>
         public Peer(string peerId, PeerOptions peerOptions, Context context)
         {
-            options = peerOptions ?? new PeerOptions(null, null, null, null, null);
-            id = peerId;
+            Options = peerOptions ?? new PeerOptions(null, null, null, null, null);
+            Id = peerId;
 			this.context = context;
             connections = new List<DataConnection>();
             InitializeServerConnection();
-            if (id == null)
+            if (Id == null)
             {
                 InitializeID();
             }
             else {
-                Initialize(id);
+                Initialize(Id);
             }
         }
 		/// <summary>
 		/// This constructor is meant to hold the peer intance for the destination.
-		/// We donot provide the options, since we donot connect this peer. We just use it to hold the peer ID so that 
+		/// We donot provide the options, since we don ot connect this peer. We just use it to hold the peer ID so that 
 		/// the peer class is uniformly used througout the code.
 		/// </summary>
 		/// <param name="peerId">Peer identifier.</param>
 		public Peer(string peerId){
-			this.id = peerId;
+			this.Id = peerId;
 		}
 
 		public DataConnection Connect(string peer,DataConnectionOptions options){
@@ -90,17 +90,24 @@ namespace PeerNet
 			return dataConnection;
 		}
 
+		/// <summary>
+		/// Internal method to init the Peer connection from server
+		/// </summary>
+		/// <param name="id">Identifier.</param>
         private void Initialize(string id)
         {
-            this.id = id;
-            socket.Start(id, this.options.Token);
+            this.Id = id;
+            socket.Start(id, this.Options.Token);
 
         }
 
+		/// <summary>
+		/// Initializes the ID by sending an HTTP request to the web server.
+		/// </summary>
         private async void InitializeID()
         {
             string protocol = "http://";
-            string url = protocol + this.options.Host + ":" + this.options.Port + this.options.Path + this.options.Key + "/id";
+            string url = protocol + this.Options.Host + ":" + this.Options.Port + this.Options.Path + this.Options.Key + "/id";
             HttpWebRequest httpWebRequest = new HttpWebRequest(new Uri(url));
             httpWebRequest.Method = "GET";
             using (WebResponse response = await httpWebRequest.GetResponseAsync())
@@ -110,52 +117,80 @@ namespace PeerNet
                     JsonSerializer jsonSerializer = new JsonSerializer();
                     StreamReader streamReader = new StreamReader(stream);
                     string id = streamReader.ReadToEnd();
-                    this.id = id;
+                    this.Id = id;
                     Initialize(id);                    
                 }
             }
 
 
         }
-
+		/// <summary>
+		/// Initializes socket to the server so that messages can be sent ot recieved
+		/// </summary>
         private void InitializeServerConnection()
         {
-            this.socket = new Socket(options.Host, options.Port, options.Path, options.Key);
+            this.socket = new Socket(Options.Host, Options.Port, Options.Path, Options.Key);
             socket.MessageArrived += Socket_MessageArrived;
             socket.SocketOpened += Socket_SocketOpened;
             socket.SocketError += Socket_SocketError;
             socket.SocketClosed += Socket_SocketClosed;
         }
 
+		/// <summary>
+		/// Event fired when the socket closed.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">Eevent Arguments</param>
         private void Socket_SocketClosed(object sender, EventArgs e)
         {
             Console.WriteLine("Socket Closed");
         }
 
+		/// <summary>
+		/// Event fired when the socket closed.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">Eevent Arguments</param>
         private void Socket_SocketError(object sender, WebSocketSharp.ErrorEventArgs args)
         {
             Console.WriteLine("Socket Error:" + args.Message);
         }
 
+		/// <summary>
+		/// Event fired when the socket opened.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">Eevent Arguments</param>
         private void Socket_SocketOpened(object sender, EventArgs e)
         {
             Console.WriteLine("Socket Opened");
         }
 
+		/// <summary>
+		/// Event fired when message arrived from the socket.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">Eevent Arguments</param>
         private void Socket_MessageArrived(object sender, SocketMessageEventArgs args)
         {
             HandleMessage(args.Message);
         }
 
+		/// <summary>
+		/// Handles the message sent by the other peer or the server
+		/// </summary>
+		/// <param name="message">Message.</param>
         private void HandleMessage(string message)
         {
             ServerMessage serverMessage = JsonConvert.DeserializeObject<ServerMessage>(message);
             switch (serverMessage.Type) {
+				//this message comes whent the connection to the sever is opened
                 case "OPEN":
                     PeerConnectedEventArgs peerConnectedEventArgs = new PeerConnectedEventArgs();
-                    peerConnectedEventArgs.PeerId = this.id;
+                    peerConnectedEventArgs.PeerId = this.Id;
                     OnPeerConnected(peerConnectedEventArgs);
                     break;
+				//this message comes in when the offer is answered by the other peer. Contains the remote session desciption
 				case "ANSWER":
 					Negotiator negotiator = Negotiator.GetNegotiator ();
 					SessionDescription sessionDescription = new SessionDescription (SessionDescription.Type.Answer, serverMessage.Payload.Sdp.Sdp);
@@ -163,7 +198,7 @@ namespace PeerNet
 					break;
             }  
         }
-
+		//Metod to fire event when the peer is connected
         private void OnPeerConnected(PeerConnectedEventArgs peerConnectedEventArgs)
         {
             PeerConnectedMessageHandler handler = PeerConnected;
@@ -173,6 +208,9 @@ namespace PeerNet
         }
     }
 
+	/// <summary>
+	/// This class hold the Class representation of the JSOn format of the server message.
+	/// </summary>
     public class ServerMessage {
 
         public string Type{get;set;}
