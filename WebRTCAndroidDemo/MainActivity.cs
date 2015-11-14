@@ -13,22 +13,23 @@ using Newtonsoft.Json.Linq;
 
 namespace WebRTCAndroidDemo
 {
-    [Activity(Label = "WebRTCAndroidDemo", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
-    {
-        TextView textView;
+	[Activity (Label = "WebRTCAndroidDemo", MainLauncher = true, Icon = "@drawable/icon")]
+	public class MainActivity : Activity
+	{
+		TextView textView;
 		Peer peer;
 		string targetPeer;
 		DataConnection dataConnection;
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
-            textView = FindViewById<TextView>(Resource.Id.textView1);
+
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreate (bundle);
+			// Set our view from the "main" layout resource
+			SetContentView (Resource.Layout.Main);
+			// Get our button from the layout resource,
+			// and attach an event to it
+			Button button = FindViewById<Button> (Resource.Id.MyButton);
+			textView = FindViewById<TextView> (Resource.Id.textView1);
 			EditText editText = FindViewById<EditText> (Resource.Id.editText1);
 			button.Click += delegate {
 				targetPeer = editText.Text;
@@ -40,32 +41,34 @@ namespace WebRTCAndroidDemo
 			sendButton.Click += SendButton_Click;
 
 
-			peer = new Peer(null, new PeerOptions(null, null, "ytgklpf684u0udi", null, null),this);
-            peer.PeerConnected += Peer_PeerConnected;
-        }
+			peer = new Peer (null, new PeerOptions (null, null, "ytgklpf684u0udi", null, null), this);
+			peer.PeerConnected += Peer_PeerConnected;
+		}
 
-        void SendButton_Click (object sender, EventArgs e)
-        {
+		void SendButton_Click (object sender, EventArgs e)
+		{
 			JObject jobject = new JObject ();
-			jobject["data"] = "Hello";
+			jobject ["data"] = "Hello";
 			dataConnection.Send (jobject.ToString ());
-        }
+		}
 
-        void DataConnection_DataConnectionOpened (object sender, EventArgs e)
-        {
+		void DataConnection_DataConnectionOpened (object sender, EventArgs e)
+		{
 			dataConnection.MessageArrived += DataConnection_MessageArrived;
-        }
+		}
 
-        void DataConnection_MessageArrived (object sender, MessageArgs messageArgs)
-        {
+		void DataConnection_MessageArrived (object sender, MessageArgs messageArgs)
+		{
 			Console.WriteLine ("New Message: " + messageArgs.Message);
-        }
+		}
 
-        private void Peer_PeerConnected(object sender, PeerConnectedEventArgs args)
-        {
-            using (var h = new Handler(Looper.MainLooper))
-                h.Post(() => { textView.Text = args.PeerId; });
-        }
-    }
+		private void Peer_PeerConnected (object sender, PeerConnectedEventArgs args)
+		{
+			using (var h = new Handler (Looper.MainLooper))
+				h.Post (() => {
+					textView.Text = args.PeerId;
+				});
+		}
+	}
 }
 

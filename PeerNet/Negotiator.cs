@@ -16,13 +16,16 @@ namespace PeerNet
 		public DataConnection dataConnection;
 		public PeerConnection peerConnection;
 		public Dictionary<string,PeerConnection> connections;
-		private static Negotiator negotiator =  new Negotiator();
+		private static Negotiator negotiator = new Negotiator ();
 		private Context context;
-		private Negotiator (){
+
+		private Negotiator ()
+		{
 		
 		}
 
-		public static Negotiator GetNegotiator(){
+		public static Negotiator GetNegotiator ()
+		{
 			return negotiator;
 		}
 
@@ -36,7 +39,7 @@ namespace PeerNet
 		{
 			this.context = context;
 			this.dataConnection = dataConnection;
-			PeerConnection peerConnection = GetPeerConnection(dataConnection,negotiatorOptions); 
+			PeerConnection peerConnection = GetPeerConnection (dataConnection, negotiatorOptions); 
 			dataConnection.Connection = peerConnection;
 
 			if (negotiatorOptions.Originator) {
@@ -46,7 +49,7 @@ namespace PeerNet
 			}
 		}
 
-		public void HandleMessage (ServerMessage serverMessage,SessionDescription sessionDescription)
+		public void HandleMessage (ServerMessage serverMessage, SessionDescription sessionDescription)
 		{
 			RemoteSDPObserver remoteSDPObserver = new RemoteSDPObserver (this);
 			peerConnection.SetRemoteDescription (remoteSDPObserver, sessionDescription);
@@ -56,10 +59,10 @@ namespace PeerNet
 		{
 			PeerConnection peerConnection = dataConnection.Connection;
 			MediaConstraints mediaConstraints = new MediaConstraints ();
-			SDPObserver sdpObserver = new SDPObserver(this);
+			SDPObserver sdpObserver = new SDPObserver (this);
 			peerConnection.CreateOffer (sdpObserver, mediaConstraints);
 		}
-	
+
 		private PeerConnection GetPeerConnection (DataConnection dataConnection, NegotiatorOptions negotiatorOptions)
 		{
 			if (connections == null) {
@@ -67,18 +70,19 @@ namespace PeerNet
 			}
 			if (negotiatorOptions.PeerConnectionID != null) {
 				PeerConnection outPeerConnection;
-				connections.TryGetValue (negotiatorOptions.PeerConnectionID,out outPeerConnection);
-					return outPeerConnection;
+				connections.TryGetValue (negotiatorOptions.PeerConnectionID, out outPeerConnection);
+				return outPeerConnection;
 			} else {
 				PeerConnection peerConnection = StartPeerConnection (dataConnection);
 				return peerConnection;
 			}
 
 		}
+
 		PeerConnection StartPeerConnection (DataConnection dataConnection)
 		{
 			MediaConstraints mediaConstraints = new MediaConstraints ();
-			PeerConnectionFactory.InitializeAndroidGlobals (context, true, true,true,VideoRendererGui.EGLContext);
+			PeerConnectionFactory.InitializeAndroidGlobals (context, true, true, true, VideoRendererGui.EGLContext);
 			PeerConnectionFactory peerConnectionFactory = new PeerConnectionFactory ();
 			//mediaConstraints.Optional.Add(new MediaConstraints.KeyValuePair("RtpDataChannels","true"));
 			Observer observer = new Observer (this);
@@ -88,59 +92,74 @@ namespace PeerNet
 	}
 
 
-	class RemoteSDPObserver : Java.Lang.Object,ISdpObserver{
+	class RemoteSDPObserver : Java.Lang.Object,ISdpObserver
+	{
 
 		private Negotiator negotiator;
 		private SessionDescription sessionDescription;
-		public RemoteSDPObserver(Negotiator negotiator){
+
+		public RemoteSDPObserver (Negotiator negotiator)
+		{
 			this.negotiator = negotiator;
 		}
 
 		#region ISdpObserver implementation
+
 		public void OnCreateFailure (string p0)
 		{
 			throw new NotImplementedException ();
 		}
+
 		public void OnCreateSuccess (SessionDescription p0)
 		{
 			Console.WriteLine ("Remote description creation success");
 		}
+
 		public void OnSetFailure (string p0)
 		{
 			//throw new NotImplementedException ();
 		}
+
 		public void OnSetSuccess ()
 		{
 			Console.WriteLine ("Remote description set success");
 		}
+
 		#endregion
 
 	}
 
 
 
-	class SDPObserver : Java.Lang.Object,ISdpObserver{
+	class SDPObserver : Java.Lang.Object,ISdpObserver
+	{
 
 		private Negotiator negotiator;
 		private SessionDescription sessionDescription;
-		public SDPObserver(Negotiator negotiator){
+
+		public SDPObserver (Negotiator negotiator)
+		{
 			this.negotiator = negotiator;
 		}
 
 		#region ISdpObserver implementation
+
 		public void OnCreateFailure (string p0)
 		{
 			throw new NotImplementedException ();
 		}
+
 		public void OnCreateSuccess (SessionDescription p0)
 		{
 			sessionDescription = p0;
 			negotiator.peerConnection.SetLocalDescription (this, p0);
 		}
+
 		public void OnSetFailure (string p0)
 		{
 			//throw new NotImplementedException ();
 		}
+
 		public void OnSetSuccess ()
 		{
 			JObject sdp = new JObject ();
@@ -152,28 +171,33 @@ namespace PeerNet
 			payload ["label"] = negotiator.dataConnection.Id;
 			payload ["connectionId"] = negotiator.dataConnection.Id;
 			payload ["reliable"] = negotiator.dataConnection.DataConnectionOptions.Reliable;
-			payload ["serialization"] = negotiator.dataConnection.DataConnectionOptions.Serialization.ToString();
+			payload ["serialization"] = negotiator.dataConnection.DataConnectionOptions.Serialization.ToString ();
 			payload ["metadata"] = negotiator.dataConnection.DataConnectionOptions.MetaData;
 			JObject message = new JObject ();
 			message ["type"] = "OFFER";
 			message ["payload"] = payload;
 			message ["dst"] = negotiator.dataConnection.Peer.Id;
-			Console.WriteLine ("Offer JSON " + message.ToString()); 
-			negotiator.dataConnection.Provider.socket.Send (message.ToString());
+			Console.WriteLine ("Offer JSON " + message.ToString ()); 
+			negotiator.dataConnection.Provider.socket.Send (message.ToString ());
 		}
+
 		#endregion
 
 	}
 
-	class Observer : Java.Lang.Object,PeerConnection.IObserver{
+	class Observer : Java.Lang.Object,PeerConnection.IObserver
+	{
 
 		Negotiator negotiator;
 
-		public Observer(Negotiator negotiator){
+		public Observer (Negotiator negotiator)
+		{
 			this.negotiator = negotiator;
 		}
 		//for mediaconnection so we wont implement it
+
 		#region IObserver implementation
+
 		public void OnAddStream (MediaStream p0)
 		{
 			//throw new NotImplementedException ();
@@ -193,7 +217,7 @@ namespace PeerNet
 			JObject payload = new JObject ();
 			payload ["candidate"] = candidate;
 			payload ["type"] = negotiator.dataConnection.Type;
-			payload["connectionId"] = negotiator.dataConnection.Id;
+			payload ["connectionId"] = negotiator.dataConnection.Id;
 			JObject message = new JObject ();
 			message ["type"] = "CANDIDATE";
 			message ["payload"] = payload;
@@ -237,13 +261,16 @@ namespace PeerNet
 		{
 			//throw new NotImplementedException ();
 		}
+
 		#endregion
 		
 	}
 
-	public class NegotiatorOptions{
-		public bool Originator{ get; set;}
-		public string PeerConnectionID{ get; set;}
+	public class NegotiatorOptions
+	{
+		public bool Originator{ get; set; }
+
+		public string PeerConnectionID{ get; set; }
 	}
 }
 	
